@@ -1,12 +1,13 @@
 # Site settings
-title: Clean Blog
+title: SG Südtirol 07
 header-img: img/home-bg.jpg
 email: simonmulser@gmail.com
-copyright_name: Your/Project/Corporate Name
-description: "Write your site description here. It will be used as your sites meta description as well!"
+copyright_name: SG Südtirol 07
+description: "Die offizielle Seite der Spielgemeinschaft Südtirol 07"
 baseurl: ""
 url: "http://simonmulser.github.io/"
-github_username:  simonmulser
+github_username: ssimonmulser
+facebook_username: sgsuedtirol
 
 # Build settings
 markdown: kramdown
