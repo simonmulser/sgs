@@ -7,13 +7,18 @@ order: "1"
 ---
 
 {% assign player_by_position = site.data.players | group_by:"position" %}
-{% for position in player_by_position %}
-    <h2>{{ position.name }}</h2>
-    <ul class="players">
-    {% for player in position.items %}
+
+{% for position in site.data.configuration.positions %}
+<h2>{{ position }}</h2>
+{% for items_in_position in player_by_position %}
+{% if items_in_position.name == position%}
+<ul class="players">
+    {% for player in items_in_position.items %}
         <li>
             {{ player.name }} ({{ player.origin }}){% if forloop.last == false %},{% endif %}
         </li>
     {% endfor %}
-    </ul>
+</ul>
+{% endif %}
+{% endfor %}
 {% endfor %}
