@@ -6,8 +6,14 @@ header-img: "img/about-bg.jpg"
 order: "1"
 ---
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestiae debitis nobis, quod sapiente qui voluptatum, placeat magni repudiandae accusantium fugit quas labore non rerum possimus, corrupti enim modi! Et.</p>
+{% assign player_by_position = site.data.players | group_by:"position" %}
+{% for position in player_by_position %}
+    <h2>{{ position.name }}</h2>
+    <ul class="players">
+    {% for player in position.items %}
+        <li>
+            {{ player.name }} ({{ player.origin }}){% if forloop.last == false %},{% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% endfor %}
