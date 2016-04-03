@@ -4,7 +4,7 @@ title: Gabriel Oberhuber
 subtitle: "Vale, vale und ollm a bissl Gas!"
 author: Simon Mulser
 category: eroi
-"header-img": "img/post-bg-01.jpg"
+"header-img": "img/wattturnier-bg.jpg"
 layout:     post
 title:      "Gabriel Oberhuber"
 subtitle:   "Vale, vale und ollm a bissl Gas!"
